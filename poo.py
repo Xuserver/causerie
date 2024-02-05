@@ -1,8 +1,4 @@
-# static
-class PI:
-    @staticmethod
-    def val():
-        return 3.14 
+import math
 
 # parent
 class Cercle:
@@ -10,10 +6,10 @@ class Cercle:
         self.rayon = rayon
 
     def aire(self):
-        return PI.val() * self.rayon**2
+        return math.pi * self.rayon**2
     
     def circonférence(self):
-        return 2* PI.val() * self.rayon
+        return 2* math.pi * self.rayon
 
 # enfant
 class Cylindre(Cercle):
