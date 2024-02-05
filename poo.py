@@ -4,10 +4,8 @@ import math
 class Cercle:
     def __init__(self, rayon):
         self.rayon = rayon
-
     def aire(self):
         return math.pi * self.rayon**2
-    
     def circonférence(self):
         return 2* math.pi * self.rayon
 
@@ -33,20 +31,6 @@ class Cylindre(Cercle):
         return aire_cylindre
 
 
-# sans héritage, passage par argument 
-class CylindreFromCercle:
-    def __init__(self, cercle : Cercle, hauteur):
-        self.cercle = cercle
-        self.hauteur = hauteur
-        
-    def volume(self):
-        return self.cercle.aire() * self.hauteur
-    
-    def aire(self):
-        return 2 * (self.cercle.aire() + self.cercle.circonférence() * self.hauteur)
-    
-    def circonférence(self):
-        return self.cercle.circonférence()
 
 if __name__ == "__main__":
     rayon = 5
@@ -60,9 +44,3 @@ if __name__ == "__main__":
     print("mon_cylindre.volume = ", mon_cylindre.volume())
     print("mon_cylindre.circonférence = ", mon_cylindre.circonférence())
     print("mon_cylindre.aire = ",mon_cylindre.aire())
-
-    mon_autrecylindre = CylindreFromCercle( cercle=mon_cercle, hauteur=hauteur) 
-    # autre design pattern de type factory
-    print("mon_autrecylindre.volume = ", mon_autrecylindre.volume())
-    print("mon_autrecylindre.circonférence = ", mon_autrecylindre.circonférence())
-    print("mon_autrecylindre.aire = ",mon_autrecylindre.aire())
