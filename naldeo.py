@@ -9,8 +9,6 @@ joblib_backups = "C:\\pydev\\hfgj\\"
 # variable globale
 repertoire_courant = os.getcwd()
 
-# catégories métier
-categories=["Eau potable","Assainissement","Voirie Réseaux","Chauffage urbain","Energie Photovoltaique","Informatique","finance","bande dessinée","french","belge","other"]
 
 ###########################################################################################
 #
@@ -38,7 +36,7 @@ def printSysNOK(str):
 # system : OK
 def printSysOK(str):
     print()
-    print("\033[1m"+str+"\033[0m")
+    print("\033[92m"+str+"\033[0m")
     print()
 
 

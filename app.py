@@ -1,6 +1,5 @@
 
 from naldeo import NaldeoStdModel, printB, printI, repertoire_courant, joblib_backups
-
 from matplotlib import pyplot as plt
 
 
@@ -11,10 +10,18 @@ from matplotlib import pyplot as plt
 ###########################################################################################
 
 
+
+class NaldeoTraductionModel2(NaldeoStdModel):
+    def __init__(self):
+        # Pipeline pour la traduction ()
+        super().__init__("translation", "PaulineSanchez/Modele_traduction_HF")
+
 class NaldeoTraductionModel(NaldeoStdModel):
     def __init__(self):
         # Pipeline pour la traduction (Anglais vers Français par exemple)
         super().__init__("translation_en_to_fr", "t5-base")
+    def traduit(self, texte):
+        return self.do(texte)[0]['translation_text']
         
 class NaldeoClassificationModel(NaldeoStdModel):
     def __init__(self,labels):
@@ -56,6 +63,16 @@ class NaldeoImageDescriber(NaldeoStdModel):
         return self.result
 
 
+class NaldeoTableQuestionning(NaldeoStdModel):
+    def __init__(self):
+        super().__init__("table-question-answering", "google/tapas-large-finetuned-wtq")
+    def do(self,table,question):
+        self.response = self.pipeline(table=table, query=question)
+        self.result = self.response['cells'][0]
+        return self.result
+
+
+
 
 if __name__ == "__main__":
 
@@ -94,11 +111,11 @@ if __name__ == "__main__":
     # Exemple de texte long à résumer
 
     c = input("""
-    choose a topic for localy driven IA transformers
+    choose a topic for local driven IA Transformer
         solar (s) 
         water (w)
-        fincance (f)
-        thorgal (t)
+        finance (f)
+        BD thorgal (t)
         captain (h)
         ... other
     """) 
@@ -137,10 +154,7 @@ if __name__ == "__main__":
     "Energie Photovoltaique",
     "Informatique",
     "finance",
-    "bande dessinée",
-    "french",
-    "belge",
-    "other"
+    "bande dessinée"
     ]
 
     print ("Liste des catégories de texte : ", labels)

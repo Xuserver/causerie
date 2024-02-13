@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Première Page avec Bootstrap</title>
+    <title>Causerie Bootstrap</title>
 
     <!-- Ajout de Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 <body>
 
     <header class="bg-primary text-white text-center py-5">
-        <h1>Titre de la Page</h1>
+        <h1>Causerie Informatique</h1>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,9 +44,37 @@
         <br />
         <button id="openModalBtn" class="btn btn-outline-secondary" type="button">Evolution des langages</button>
 
+        <button id="openModalBtn1" class="btn btn-outline-secondary" type="button">Exemples de modèles HF</button>
+        
+        
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Exemples de modèles HF</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="https://huggingface.co/PaulineSanchez/Modele_traduction_HF">Traduction</a></li>
+                        <li class="list-group-item"><a href="https://huggingface.co/Falconsai/text_summarization">Résumé</a></li>
+                        <li class="list-group-item"><a href="https://huggingface.co/spaces/HuggingFaceM4/screenshot2html">Génération de Site Web</a></li>
+                        <!--<li class="list-group-item"><a href="https://huggingface.co/spaces/marcosv/InstructIR">Image to code</a></li>-->
+                        <li class="list-group-item"><a href="https://huggingface.co/spaces/vikhyatk/moondream1">Vision</a></li>
+                        <li class="list-group-item"><a href="https://huggingface.co/spaces/dalle-mini/dalle-mini">Génération d'image</a></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
 
-        https://huggingface.co/spaces/HuggingFaceM4/screenshot2html
-        https://huggingface.co/spaces/marcosv/InstructIR
 
 
         <div id="result"></div>
@@ -65,7 +93,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ma Modal de Grande Taille</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Evolution des langages</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -174,12 +202,20 @@
             $("#openModalBtn").click(function () {
                 $("#myModal").modal('show');
             });
+            $("#openModalBtn1").click(function () {
+                $("#myModal1").modal('show');
+            });
             
             
 
         });
     </script>
-
+    <script>
+      // Demande à l'utilisateur son nom
+      var nom = prompt("Bonjour ! Quel est votre nom ?");
+      // Affiche un message de bienvenue avec le nom de l'utilisateur
+      alert("Bonjour, " + nom + " !");
+  </script>
 </body>
 
 </html>

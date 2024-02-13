@@ -9,6 +9,22 @@ class Cercle:
     def circonférence(self):
         return 2* math.pi * self.rayon
 
+
+mon_cercle = Cercle(1)
+print(mon_cercle.aire())
+
+
+
+
+
+
+
+
+
+
+
+
+
 # enfant
 class Cylindre(Cercle):
     def __init__(self, rayon, hauteur):
@@ -36,11 +52,9 @@ if __name__ == "__main__":
     rayon = 5
     hauteur = 6
     mon_cercle = Cercle(rayon)
-    print("cercle.aire = ", mon_cercle.aire())
-    print("cercle.circonférence = ", mon_cercle.circonférence())
+    # on peut inverser les arguments, parce qu'on les nomme
+    mon_cylindre = Cylindre(hauteur=hauteur, rayon=rayon)
     
-    mon_cylindre = Cylindre( hauteur=hauteur, rayon=rayon)
-     # on peut inverser les arguments, parce qu'on les nomme
     print("mon_cylindre.volume = ", mon_cylindre.volume())
-    print("mon_cylindre.circonférence = ", mon_cylindre.circonférence())
     print("mon_cylindre.aire = ",mon_cylindre.aire())
+    print("mon_cylindre.circonférence = ", mon_cylindre.circonférence())
