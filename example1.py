@@ -1,6 +1,8 @@
+
 import math
 
-# parent
+# définition d'un cercle, avec sa méthode aire
+# avantage : définit une fois, réutilisable partout
 class Cercle:
     def __init__(self, rayon):
         self.rayon = rayon
@@ -10,36 +12,23 @@ class Cercle:
         return 2* math.pi * self.rayon
 
 
-mon_cercle = Cercle(1)
-print(mon_cercle.aire())
 
+# définition d'un cylindre 
+# objet qui hérite d'être un cercle avec une hauteur en plus
+# super() désigne le cercle sous jacent
 
-
-
-
-
-
-
-
-
-
-
-
-# enfant
 class Cylindre(Cercle):
     def __init__(self, rayon, hauteur):
         super().__init__(rayon)
         self.hauteur = hauteur
+    
+    def section(self):
+        return super().aire()
         
     def volume(self):
         return self.section() * self.hauteur
     
-    def section(self):
-        return super().aire()
-
     def aire(self):
-        # calcul_sans_heritage = 2 * PI.val() * self.rayon * self.hauteur  + 2 *  PI.val() * self.rayon**2
-
         aire_latérale = super().circonférence()*self.hauteur
         aire_haut = super().aire()
         aire_bas = super().aire()
@@ -49,12 +38,11 @@ class Cylindre(Cercle):
 
 
 if __name__ == "__main__":
-    rayon = 5
-    hauteur = 6
-    mon_cercle = Cercle(rayon)
-    # on peut inverser les arguments, parce qu'on les nomme
+    rayon = 1
+    hauteur = 1
     mon_cylindre = Cylindre(hauteur=hauteur, rayon=rayon)
     
-    print("mon_cylindre.volume = ", mon_cylindre.volume())
-    print("mon_cylindre.aire = ",mon_cylindre.aire())
-    print("mon_cylindre.circonférence = ", mon_cylindre.circonférence())
+    print("section du cylindre ",mon_cylindre.section())
+    print("aire du cylindre ",mon_cylindre.aire())
+    print("volume du cylindre ", mon_cylindre.volume())
+    print("circonférence du cylindre = ", mon_cylindre.circonférence())

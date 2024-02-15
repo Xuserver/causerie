@@ -1,3 +1,5 @@
+# autre design pattern : le décorateur
+
 
 # Définition du décorateur voiture
 def voiture(classe):

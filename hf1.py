@@ -1,5 +1,5 @@
-from naldeo import printSysOK , printB, printI
-from app import NaldeoTraductionModel, NaldeoClassificationModel
+from stdmodel import printSysOK , printB, printI
+from naldeo import NaldeoTraductionModel, NaldeoClassificationModel
 
 
 textAnglais = f"""Solar Horizon is an innovative photovoltaic project aimed at harnessing the power of solar energy to create a sustainable and eco-friendly 
