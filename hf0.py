@@ -5,3 +5,4 @@ text = f"""Microsoft Corporation is an American multinational technology corpora
 """
 traduction = pipe(text)[0]['translation_text']
 print(traduction)
+
