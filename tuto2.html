@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Causerie Bootstrap</title>
+    <title>Ma Première Page avec CSS & Bootstrap</title>
 
     <!-- Ajout de Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
 
     <header class="bg-primary text-white text-center py-5">
-        <h1>Causerie Informatique</h1>
+        <h1>CSS 1996</h1>
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="tuto.html">HTML</a></li>
-                <li class="nav-item"><a class="nav-link" href="tuto1.html">CSS</a></li>
-                <li class="nav-item"><a class="nav-link" href="tuto2.html">AJAX et API</a></li>
+                <li class="nav-item"><a class="nav-link" href="tuto1.html">HTML</a></li>
+                <li class="nav-item"><a class="nav-link" href="tuto2.html">CSS</a></li>
+                <li class="nav-item"><a class="nav-link" href="tuto3.html">AJAX et API</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://github.com/Xuserver/causerie/tree/main">GITHUB</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://openai.com">GPT (OpenIA)</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://huggingface.co">Huggingface</a></li>
@@ -29,194 +27,26 @@
         </div>
     </nav>
 
-    <section class="container mt-4 mb-5">
-        <h2>Site Web dynamiques et connectés : AJAX 2006</h2>
-        <p>Bienvenue sur ma première page HTML avec Bootstrap et une connection vers Wikipédia</p>
+    <section class="container mt-4">
+        <h2>Séparation de la forme et du fond</h2>
+        <p>La forme est placée dans un fichier à part (CSS), relié par une balise html</p>
+        <p>Chaque balise dans le document HTML peut obtenir un style particulier</p>
         
+        <p>Twitter lance le Framework CSS BOOTSTRAP en août 2011, rapidement adpoté par une grande partie des sites internet</p>
 
-        <div class="input-group">
-            <input type="text" class="form-control" id="search" placeholder="Entrez votre recherche">
-            <div class="input-group-append">
-                <button id="send" class="btn btn-outline-secondary" type="button">Rechercher</button>
-            </div>
-        </div>
-
-        <br />
-        <button id="openModalBtn" class="btn btn-outline-secondary" type="button">Evolution des langages</button>
-
-        <button id="openModalBtn1" class="btn btn-outline-secondary" type="button">Exemples de modèles HF</button>
+        <a href="tuto2.html">Trés vite, on ajoute du dynamisme, avec javascript  ... </a>
         
-        
-        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Exemples de modèles HF</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="https://huggingface.co/PaulineSanchez/Modele_traduction_HF">Traduction</a></li>
-                        <li class="list-group-item"><a href="https://huggingface.co/Falconsai/text_summarization">Résumé</a></li>
-                        <li class="list-group-item"><a href="https://huggingface.co/spaces/HuggingFaceM4/screenshot2html">Génération de Site Web</a></li>
-                        <!--<li class="list-group-item"><a href="https://huggingface.co/spaces/marcosv/InstructIR">Image to code</a></li>-->
-                        <li class="list-group-item"><a href="https://huggingface.co/spaces/vikhyatk/moondream1">Vision</a></li>
-                        <li class="list-group-item"><a href="https://huggingface.co/spaces/dalle-mini/dalle-mini">Génération d'image</a></li>
-                        <li class="list-group-item"><a href="https://huggingface.co/spaces/ClassCat/DETR-Object-Detection">Détection d'image</a></li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-        
-
-
-
-        <div id="result"></div>
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Ma Première Page. .</p>
-
+        <p>&copy; 2024 Ma Première Page. </p>
     </footer>
 
-
-
-
-    <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Evolution des langages</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- Contenu de la modal -->
-          <a class="btn btn-primary" href="https://www.youtube.com/embed/If9rD2LZduc?si=yz1EiSGNQx7n2SIq&amp;controls=0">en vidéo</a>
-          <ul class="list-group">
-            <li class="list-group-item">Assembly Language (ASM) - Années 1940 (différentes versions au fil du temps)</li>
-            <li class="list-group-item">Fortran - 1957</li>
-            <li class="list-group-item">COBOL - 1959</li>
-            <li class="list-group-item">Smalltalk  - 1970 : Apparition de la Programmation Objet</li>
-            <li class="list-group-item">Pascal - 1970</li>
-            <li class="list-group-item">C - 1972</li>
-            <li class="list-group-item">SQL - 1974 : Bases de données relationnelles (DB2 IBM)</li>
-            <li class="list-group-item">C++ et Oracle Corporation - 1983</li>
-            <li class="list-group-item">Perl - 1987</li>
-            <li class="list-group-item">Python - 1989</li>
-            <li class="list-group-item">Java - 1995</li>
-            <li class="list-group-item">MySQL - 1995 et PostgreSQL en 1996 </li>
-            <li class="list-group-item">UML - 1997 : Apparition d'un formalisme pour représenter et communiquer des idées dans le domaine du développement logiciel</li> 
-            <li class="list-group-item">Beepblue - 1997 : Deep Blue bat le champion du monde d'échecs Garry Kasparov</li>
-            <li class="list-group-item">JavaScript - 1995</li>
-            <li class="list-group-item">PHP et Ruby  - 1995</li>
-            <li class="list-group-item">Apparition de Google 1998</li>
-            <li class="list-group-item">2001 : invention du format JSON (Douglas Crockford)</li>
-            <li class="list-group-item">Git - 2005 (Linus Torvalds) : gestion de versions décentralisé, partage de code</li>
-            <li class="list-group-item">jQuery - 2006 : uniformiser javascript (John Resig)</li>
-            <li class="list-group-item">Facebook 2006 : ouvre ses portes au grand public</li>
-            <li class="list-group-item">iPhone - 2007 </li>
-            <li class="list-group-item">GitHub 2008  - portage de Git sur internet </li>
-            <li class="list-group-item">Angular - 2010 : développement d'applications web monopages</li>
-            <li class="list-group-item">Oracle 2010 : Oracle rachète MySQL</li> 
-            <li class="list-group-item">MongoDB - 2010 : Bases de données non structurées</li>
-            <li class="list-group-item">AlphaGo - 2016 bat le champion du monde de Go, Lee Sedol</li>
-            <li class="list-group-item">Huggingface - 2016 lancement de la plateforme permettant le partage des modèles IA</li>
-            <li class="list-group-item">Microsoft rachète GitHub - 2018</li>
-            <li class="list-group-item">OpenAI lance l'architecture de modèle de langage GPT-2 - 2018.</li>
-            <li class="list-group-item">Gradio : racheté par Huggingface - 2021</li>
-            <li class="list-group-item">Chatpgt 3 - 2022</li>
-            <li class="list-group-item">HuggingFace : 496,407 modèles en ligne</li>
-          </ul>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
     <!-- Ajout de Bootstrap JS et Popper.js pour les fonctionnalités avancées -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     
-
-    <!-- Script pour afficher la fenêtre modale au chargement de la page -->
-    
-    <script>
-        $(document).ready(function () {
-            function sendAjax(params) {
-                // URL de l'API MediaWiki
-                console.log(params)
-                var apiUrl = "https://en.wikipedia.org/w/api.php";
-                $.ajax({
-                    url: apiUrl,
-                    data: params,
-                    dataType: "jsonp",
-                    success: function (response) {
-                        // Récupérer la première page (il peut y avoir plusieurs pages dans la réponse)
-                        console.log(response.query.pages)
-                        var pageId = Object.keys(response.query.pages)[0];
-                        var extract = response.query.pages[pageId].extract;
-                        
-                        // Afficher le résultat dans la div avec l'id "result"
-                        $("#result").html(extract);
-                    },
-                    error: function (error) {
-                        console.error("Erreur lors de la requête API : ", error);
-                    }
-                });
-            }
-            
-            var paraminit = {
-                action: "query",
-                format: "json",
-                titles: "Bootstrap",
-                prop: "extracts",
-                exintro: true
-            };
-            //sendAjax(paraminit)
-
-            $("#send").click(function () {
-                val = $("#search").val()
-                var params = {
-                    action: "query",
-                    format: "json",
-                    titles: val,
-                    prop: "extracts",
-                    exintro: true
-                };
-                sendAjax(params)
-            })
-            
-            // Ouvrir la modal
-            $("#openModalBtn").click(function () {
-                $("#myModal").modal('show');
-            });
-            $("#openModalBtn1").click(function () {
-                $("#myModal1").modal('show');
-            });
-            
-            
-
-        });
-    </script>
-    <script>
-      // Demande à l'utilisateur son nom
-      var nom = prompt("Bonjour ! Quel est votre nom ?");
-      // Affiche un message de bienvenue avec le nom de l'utilisateur
-      alert("Bonjour, " + nom + " !");
-  </script>
 </body>
-
 </html>
