@@ -3,7 +3,7 @@
 
 # Définition du décorateur voiture
 def voiture(classe):
-    classe.type = "Engin roulant"
+    classe.type = "Engin roulant, avec quatre roures et un moteur"
     return classe
 
 

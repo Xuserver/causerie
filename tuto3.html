@@ -8,13 +8,25 @@
 
     <!-- Ajout de Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+
 </head>
 
 <body>
 
     <header class="bg-primary text-white text-center py-5">
-      
+      <style>
+        /* Custom styles for the footer */
+        footer {
+          padding: 20px 0;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+        }
+      </style>
         <h1 id="nameIci">Causerie Informatique</h1>
+        <i class="bi bi-arrow-down"></i>
+
     </header>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -35,16 +47,8 @@
 
         
         <p>Les pages deviennent dynamique du coté serveur qui retourne un contenu différent en fonction de l'url qui lui est envoyé</p>
-        <p>De nombreux langages et frameworks apparaissent </p>
-        <p>Du coté client, c'est le langage javascipt qui permet de manipuler le document HTML</p>
-                
-
-        <div class="input-group">
-            <input type="text" class="form-control" id="search" placeholder="Entrez votre recherche">
-            <div class="input-group-append">
-                <button id="send" class="btn btn-outline-secondary" type="button">Rechercher</button>
-            </div>
-        </div>
+        <p>De nombreux langages et environnements de développement apparaissent (les frameworks)</p>
+        <p>Du coté client, c'est le langage javascript qui permet de manipuler le document HTML</p>
 
         <br />
         <button id="openModalBtn2" class="btn btn-outline-secondary" type="button">S'identifier</button>
@@ -52,7 +56,16 @@
         <button id="openModalBtn" class="btn btn-outline-secondary" type="button">Evolution des langages</button>
 
         <button id="openModalBtn1" class="btn btn-outline-secondary" type="button">Exemples de modèles HF</button>
-                
+        
+        <br />
+        <br />
+        <br />
+        <div class="input-group">
+          <input type="text" class="form-control" id="search" placeholder="Entrez votre recherche sur wikipedia">
+          <div class="input-group-append">
+              <button id="send" class="btn btn-outline-secondary" type="button">Rechercher</button>
+          </div>
+        </div>
         
         <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -87,8 +100,8 @@
 
         <div id="result"></div>
     </section>
-
-    <footer class="bg-dark text-white text-center py-3">
+    <br /><br /><br /><br />
+    <footer class="footer bg-dark text-white text-center py-3">
         <p>&copy; 2024 Ma Première Page. .</p>
 
     </footer>
@@ -108,41 +121,82 @@
         </div>
         <div class="modal-body">
           <!-- Contenu de la modal -->
-          <a class="btn btn-primary" href="https://www.youtube.com/embed/If9rD2LZduc?si=yz1EiSGNQx7n2SIq&amp;controls=0">en vidéo</a>
+          <ul id="projectList" class="list-group">
+            <!-- Les projets seront ajoutés ici dynamiquement -->
+          </ul>
           <ul class="list-group">
-            <li class="list-group-item">Assembly Language (ASM) - Années 1940 (différentes versions au fil du temps)</li>
-            <li class="list-group-item">Fortran - 1957</li>
-            <li class="list-group-item">COBOL - 1959</li>
-            <li class="list-group-item">Smalltalk  - 1970 : Apparition de la Programmation Objet</li>
-            <li class="list-group-item">Pascal - 1970</li>
-            <li class="list-group-item">C - 1972</li>
-            <li class="list-group-item">SQL - 1974 : Bases de données relationnelles (DB2 IBM)</li>
-            <li class="list-group-item">C++ et Oracle Corporation - 1983</li>
-            <li class="list-group-item">Perl - 1987</li>
-            <li class="list-group-item">Python - 1989</li>
-            <li class="list-group-item">Java - 1995</li>
-            <li class="list-group-item">MySQL - 1995 et PostgreSQL en 1996 </li>
-            <li class="list-group-item">UML - 1997 : Apparition d'un formalisme pour représenter et communiquer des idées dans le domaine du développement logiciel</li> 
-            <li class="list-group-item">Beepblue - 1997 : Deep Blue bat le champion du monde d'échecs Garry Kasparov</li>
-            <li class="list-group-item">JavaScript - 1995</li>
-            <li class="list-group-item">PHP et Ruby  - 1995</li>
-            <li class="list-group-item">Apparition de Google 1998</li>
-            <li class="list-group-item">2001 : invention du format JSON (Douglas Crockford)</li>
-            <li class="list-group-item">Git - 2005 (Linus Torvalds) : gestion de versions décentralisé, partage de code</li>
-            <li class="list-group-item">jQuery - 2006 : uniformiser javascript (John Resig)</li>
-            <li class="list-group-item">Facebook 2006 : ouvre ses portes au grand public</li>
-            <li class="list-group-item">iPhone - 2007 </li>
-            <li class="list-group-item">GitHub 2008  - portage de Git sur internet </li>
-            <li class="list-group-item">Angular - 2010 : développement d'applications web monopages</li>
-            <li class="list-group-item">Oracle 2010 : Oracle rachète MySQL</li> 
-            <li class="list-group-item">MongoDB - 2010 : Bases de données non structurées</li>
-            <li class="list-group-item">AlphaGo - 2016 bat le champion du monde de Go, Lee Sedol</li>
-            <li class="list-group-item">Huggingface - 2016 lancement de la plateforme permettant le partage des modèles IA</li>
-            <li class="list-group-item">Microsoft rachète GitHub - 2018</li>
-            <li class="list-group-item">OpenAI lance l'architecture de modèle de langage GPT-2 - 2018.</li>
-            <li class="list-group-item">Gradio : racheté par Huggingface - 2021</li>
-            <li class="list-group-item">Chatpgt 3 - 2022</li>
-            <li class="list-group-item">HuggingFace : 496,407 modèles en ligne</li>
+
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="asm">
+              <i class="fas fa-check-square"></i>
+              Assembly Language (ASM) - Années 1940 (différentes versions au fil du temps)
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="fortran">
+              <i class="fas fa-check-square"></i> Fortran - 1957
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="cobol">
+              <i class="fas fa-check-square"></i> COBOL - 1959
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="basic">
+              <i class="fas fa-check-square"></i> basic - 1960
+            </a>
+            <li class="list-group-item list-group-item-warning"><i class="fas fa-check-square"></i> 1970 : Apparition de la Programmation Objet</li>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="pascal">
+              <i class="fas fa-check-square"></i> Pascal - 1970
+            </a>
+            
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="c++">
+              <i class="fas fa-check-square"></i> 
+              C - 1972, C++ 1980
+            </a>
+            <li class="list-group-item list-group-item-warning"><i class="fas fa-check-square"></i> Bases de données relationnelles (DB2 IBM)</li>
+            <li class="list-group-item list-group-item-warning">              <i class="fas fa-check-square"></i> Oracle Corporation - 1983</li>
+            <li class="list-group-item list-group-item-primary list-group-item-action openModal" langage="perl">
+              <i class="fas fa-check-square"></i> Perl - 1987
+            </li>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="python">
+              <i class="fas fa-check-square"></i> Python - 1989
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="java">
+              <i class="fas fa-check-square"></i> Java - 1995
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="sql">
+              <i class="fas fa-check-square"></i> MySQL - 1995 et PostgreSQL en 1996 
+            </a>
+            <li class="list-group-item list-group-item-warning"><i class="fas fa-check-square"></i> UML - 1997 : Apparition d'un formalisme pour représenter et communiquer des idées dans le domaine du développement logiciel</li> 
+            <li class="list-group-item list-group-item-success"><i class="fas fa-check-square"></i> 1997 : Deep Blue bat le champion du monde d'échecs Garry Kasparov</li>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="javascript">
+              <i class="fas fa-check-square"></i>
+               JavaScript - 1995
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="php">
+              <i class="fas fa-check-square"></i> PHP 1995
+            </a>
+            <a class="list-group-item list-group-item-primary list-group-item-action openModal" langage="ruby">
+              <i class="fas fa-check-square"></i> Ruby  - 1995
+            </a>
+            <li class="list-group-item list-group-item-warning"><i class="fas fa-check-square"></i> Apparition de Google 1998</li>
+            <li class="list-group-item list-group-item-warning"><i class="fas fa-check-square"></i> 2001 : invention du format JSON (Douglas Crockford)</li>
+            <a class="list-group-item list-group-item-primary list-group-item-action" target="video" href="https://www.youtube.com/embed/If9rD2LZduc?si=yz1EiSGNQx7n2SIq&controls=1&mute=1&vq=hd720&amp;autoplay=1&speed=2">
+              <i class="fa-regular fa-square"></i> 
+              en vidéo
+              
+            </a>
+            
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> Git - 2005 (Linus Torvalds) : gestion de versions décentralisé, partage de code</li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> jQuery - 2006 : uniformiser javascript (John Resig)</li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> Facebook 2006 : ouvre ses portes au grand public</li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> iPhone - 2007 </li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> GitHub 2008  - portage de Git sur internet </li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> Angular - 2010 : développement d'applications web monopages</li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> Oracle 2010 : Oracle rachète MySQL</li> 
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> MongoDB - 2010 : Bases de données non structurées</li>
+            <li class="list-group-item list-group-item-success"><i class="fa-regular fa-square"></i> AlphaGo - 2016 bat le champion du monde de Go, Lee Sedol</li>
+            <li class="list-group-item"><i class="fa-regular fa-square"></i> Huggingface - 2016 lancement de la plateforme permettant le partage des modèles IA</li>
+            <li class="list-group-item list-group-item-warning"><i class="fa-regular fa-square"></i> Microsoft rachète GitHub - 2018</li>
+            <li class="list-group-item  list-group-item-success"><i class="fa-regular fa-square"></i> OpenAI lance l'architecture de modèle de langage GPT-2 - 2018.</li>
+            <li class="list-group-item  list-group-item-success"><i class="fa-regular fa-square"></i> Gradio : racheté par Huggingface - 2021</li>
+            <li class="list-group-item list-group-item-success"><i class="fa-regular fa-square"></i> Chatpgt 3 - 2022</li>
+            <li class="list-group-item list-group-item-success"><i class="fa-regular fa-square"></i> HuggingFace : 496,407 modèles en ligne</li>
           </ul>
         </div>
         <div class="modal-footer">
@@ -151,6 +205,30 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Modale -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">Projets populaires sur Github</h5>
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title" id="titlLang"></h4>
+          <!-- IFrame -->
+          <ul id="projectList" class="list-group">
+            <!-- Les projets seront ajoutés ici dynamiquement -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <!-- Ajout de Bootstrap JS et Popper.js pour les fonctionnalités avancées -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -209,24 +287,55 @@
             // Ouvrir la modal
             $("#openModalBtn").click(function () {
                 $("#myModal").modal('show');
-            });
+            })
             $("#openModalBtn1").click(function () {
                 $("#myModal1").modal('show');
-            });
+            })
             $("#openModalBtn2").click(function () {
               var nom = prompt("Bonjour ! Quel est votre nom ?");
               $("#nameIci").html("Bonjour "+nom + ", comment vas-tu ?")
+              $("#openModalBtn1").show()
+              $("#openModalBtn").show()
+              $("#send").show()
+              $("#search").show()
             });
             
+            $(".openModal").click(function(){
+              langage=$(this).attr("langage")
+              // $("#exampleModal").modal('show'); // Afficher la modale
+              getPopularProjects(langage, 10);
+              $("#projectList").insertAfter($(this))
+              
+            });
             
+            function getPopularProjects(language, count) {
+              var url = `https://api.github.com/search/repositories?q=language:${language}&sort=stars&order=desc&per_page=${count}`;
+              $.get(url, function(data){
+                if (data && data.items) {
+                  displayProjects(data.items);
+                  $("#titlLang").html(language)
+                } else {
+                  console.log("Erreur lors de la récupération des projets.");
+                }
+              });
+            }
+            function displayProjects(projects) {
+              var $list = $('#projectList');
+              $list.empty(); // Efface la liste précédente
+              $.each(projects, function(index, project){
+                var $item = $('<li>').addClass('list-group-item');
+                var $link = $('<a>').attr('href', project.html_url).attr('target', "gitwin").text(" "+project.name + " ");
+                var $stars = $('<span>').addClass('badge badge-secondary').text(`Étoiles : ${project.stargazers_count}`);
+                $item.append($stars).append($link);
+                $list.append($item);
+              });
+              
+            }
             
 
         });
     </script>
-    <script>
-      // Demande à l'utilisateur son nom
-      
-  </script>
+
 </body>
 
 </html>
