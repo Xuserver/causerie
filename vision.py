@@ -4,7 +4,7 @@ import requests
 
 
 # OpenAI API Key
-api_key = "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"
+api_key = "your key"
  
 class NaldeoVisionModel():
   def __init__(self,image_path=""):
