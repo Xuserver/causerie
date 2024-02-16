@@ -10,11 +10,6 @@ print(reponse)
 
 
 
-
-
-
-
-
 # question = "quel prestation coute 4?"
 # question = "combien pour un constat et une démolition?"
 # print(tqa.response)
