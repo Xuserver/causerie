@@ -10,6 +10,11 @@ aire = 3.14 * rayon * rayon
 print("calcul pour 2 ", aire)
 
 
+rayon = 3
+aire = 3.14 * rayon * rayon
+print("calcul pour 2 ", aire)
+
+
 # fonction écrite une fois
 # inconvénient : autant de fonction aire que de forme géométrique
 def aire(rayon):
@@ -24,6 +29,8 @@ print("calcul pour 4 ", aire(4))
 from example1 import Cercle
 c = Cercle(5)
 print("calcul pour 5 ", c.aire())
+
+print(c.faire())
 
 
 

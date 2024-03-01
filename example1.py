@@ -10,6 +10,8 @@ class Cercle:
         return math.pi * self.rayon**2
     def circonférence(self):
         return 2* math.pi * self.rayon
+    def faire(self):
+        return "fait"
 
 
 
